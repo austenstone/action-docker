@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM ubuntu:latest
 
 RUN apt install curl
 COPY entrypoint.sh /entrypoint.sh
