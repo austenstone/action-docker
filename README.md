@@ -7,16 +7,18 @@ This repository serves as a [template](https://docs.github.com/en/repositories/c
 
 ### Default Workflow
 ```yml
-on: [push]
+name: Docker Action Workflow
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
-  hello_world_job:
+  run:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world action step
-        uses: actions/hello-world-docker-action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
+      - uses: ./
 ```
 
 ## ➡️ Input Settings
