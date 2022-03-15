@@ -6,7 +6,7 @@ branding:
   color: "blue"
 
 inputs:
-  github-token:
+  token:
     description: The GitHub token used to create an authenticated client
     default: ${{ github.token }}
     required: false
@@ -15,4 +15,4 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.token }}

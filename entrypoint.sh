@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+curl -H "Authorization: bearer $1" -X POST -d " \
+ { \
+   \"query\": \"query { viewer { login }}\" \
+ } \
+" https://api.github.com/graphql
