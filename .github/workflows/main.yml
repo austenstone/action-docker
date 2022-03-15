@@ -1,11 +1,12 @@
+name: Docker Action Workflow
 on: [push]
 
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world action step
-        uses: actions/hello-world-docker-action@v1
+      - name: Run Action
+        uses: ./
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
