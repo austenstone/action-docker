@@ -8,3 +8,4 @@ jobs:
         uses: actions/hello-world-docker-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
