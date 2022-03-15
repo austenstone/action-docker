@@ -1,12 +1,12 @@
 name: Docker Action Workflow
-on: [push]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
-  hello_world_job:
+  run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: ./
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
