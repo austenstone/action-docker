@@ -9,16 +9,13 @@ This repository serves as a [template](https://docs.github.com/en/repositories/c
 ```yml
 name: Docker Action Workflow
 on:
-  push:
-  pull_request:
   workflow_dispatch:
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: ./
+      - uses: austenstone/action-docker@main
 ```
 
 ## ➡️ Input Settings
